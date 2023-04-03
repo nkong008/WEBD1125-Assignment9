@@ -1,0 +1,613 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+//scss Variables 
+$whiteColor: rgba(255, 255, 255, 1);
+$BlueColor: rgb(1, 11, 35);
+// Transparency using RGBA 
+$BlueColorTransparent: rgba(1, 11, 35, 0.75);
+$blackColor: rgb(1, 1, 1);
+$goldColor: rgb(186, 174, 103);
+// Transparency using RGBA 
+$goldColorTransparent: rgba(199, 175, 12, 0.5);
+$lightgrayColor: rgb(222, 222, 222);
+$navyblue: rgb(10, 23, 59);
+//home page starts here 
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: $whiteColor;
+
+    .nav {
+        position: fixed;
+        z-index: 10;
+        width: 100vw;
+        box-shadow: 0 0 10px rgb(62, 62, 62);
+        background-color: $BlueColor;
+
+        div.venado {
+            position: absolute;
+            font-size: 1em;
+            font-weight: 600;
+            top: 25px;
+            left: 30px;
+            color: $whiteColor;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            //gap property sets the gaps(gutters) inbewteen rows and columns
+            gap: 2rem;
+            margin: 0 2rem;
+
+            &:hover,
+            &:focus {
+                fill: $goldColor;
+            }
+
+            &item {
+                list-style: none;
+                text-decoration: none;
+                font-weight: 600;
+                position: relative;
+                padding: 1.5rem 1rem;
+                cursor: pointer;
+                color: $whiteColor;
+
+                &::after {
+                    content: "";
+                    width: 0;
+                    height: 0.15rem;
+                    position: absolute;
+                    left: 2rem;
+                    bottom: 0.8rem;
+                    background-color: $goldColor;
+                    transition: width 200ms ease-in;
+                }
+
+                &:hover::after,
+                &:focus::after {
+                    width: 60%;
+                }
+
+                &:hover ul,
+                &:focus ul {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                // dropdown bar/////
+                &drop {
+                    position: absolute;
+                    background-color: $BlueColor;
+                    top: 4.3rem;
+                    left: 1rem;
+                    box-shadow: 0 0 10px $blackColor;
+                    width: 12rem;
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 200ms ease-in-out;
+
+                    li {
+                        list-style: none;
+                        padding: 0.5rem;
+                        transition: background-color 200ms ease-in-out;
+
+                        &:hover,
+                        &:focus {
+                            background-color: $goldColorTransparent;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    main.landing-page {
+        div.box {
+            position: absolute;
+            background-color: $BlueColorTransparent;
+            height: 80vh;
+            width: 70vw;
+            top: 50%;
+            left: 50%;
+            opacity: 90%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        div.hero-page {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("../images/contact.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1;
+
+            h1.name-venado {
+                position: relative;
+                color: $goldColor;
+                font-size: 3.5em;
+                align-items: center;
+                text-align: center;
+                top: 155px;
+                z-index: 4;
+            }
+
+            h1.name-contracting {
+                position: relative;
+                color: $goldColor;
+                font-size: 3.5em;
+                align-items: center;
+                text-align: center;
+                top: 160px;
+                z-index: 4;
+            }
+
+            h1.name-services {
+                position: relative;
+                color: $goldColor;
+                font-size: 3.5em;
+                align-items: center;
+                text-align: center;
+                top: 165px;
+                z-index: 4;
+            }
+
+            p {
+                color: white;
+                z-index: 5;
+                font-size: 1em;
+                position: relative;
+                text-align: center;
+                top: 340px;
+            }
+
+            section.aboutUs {
+
+                button.btn {
+                    position: absolute;
+                    background-color: $goldColor;
+                    outline: none;
+                    border: none;
+                    width: 20%;
+                    height: 6%;
+                    transform: translate(-50%, -50%);
+                    align-items: center;
+                    left: 50%;
+                    z-index: 4;
+                    top: 600px;
+                    cursor: pointer;
+                    transition: 200ms linear;
+
+                    h2 {
+                        color: $BlueColor;
+                        transition: 200ms linear;
+                    }
+                }
+
+                button:hover {
+                    background-color: $BlueColor;
+
+                    h2:hover {
+                        color: $goldColor;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+//home page ends here///////////////////////////////////////
+//about me page starts here
+section.info-homePage {
+    width: 100%;
+    height: 50vh;
+
+    h1.what {
+        text-align: center;
+        padding-top: 70px;
+        font-size: 2.5em;
+        color: $goldColor;
+
+    }
+
+    p {
+        // text-align: center;
+        // padding: 1em 1em 1em 1em;
+        text-align: left;
+        // margin: 3em 3em;
+        padding: 40px 200px;
+        letter-spacing: 1px;
+    }
+}
+
+div.bio {
+    width: 100%;
+    height: 100vh;
+    background-color: $whiteColor;
+
+    img.logo-img {
+        position: relative;
+        padding-top: 65px;
+        padding-left: 0px;
+        padding-right: 40px;
+        float: left;
+        height: 100vh;
+    }
+
+    h1.h1-aboutUs {
+        color: $goldColor;
+        position: absolute;
+        top: 120px;
+        left: 770px;
+        // left: 500px;
+        font-size: 4em;
+        z-index: 5;
+        text-align: left;
+    }
+
+    p.p-aboutUs {
+        color: $blackColor;
+        position: relative;
+        top: 250px;
+        text-align: left;
+        padding-right: 40px;
+        letter-spacing: 1px;
+
+    }
+}
+
+
+section.footer {
+    width: 100%;
+    height: 10vh;
+    background-color: $BlueColor;
+
+    footer {
+        h3 {
+            padding-top: 35px;
+            color: $whiteColor;
+            text-align: center;
+            font-weight: 400;
+        }
+    }
+}
+//about me page ends here /////////////////
+//service starts here
+section.Services {
+
+    button.btn {
+        position: absolute;
+        background-color: $goldColor;
+        outline: none;
+        border: none;
+        width: 20%;
+        height: 6%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        left: 63%;
+        z-index: 4;
+        top: 730px;
+        cursor: pointer;
+        transition: 200ms linear;
+
+        h2 {
+            color: $BlueColor;
+            transition: 200ms linear;
+        }
+    }
+
+    button:hover {
+        background-color: $BlueColor;
+
+        h2:hover {
+            color: $goldColor;
+        }
+    }
+}
+
+section.info-bioPage {
+    width: 100%;
+    height: 50vh;
+    background-color: $BlueColor;
+
+    h1.what {
+        text-align: center;
+        padding-top: 70px;
+        font-size: 2.5em;
+        color: $goldColor;
+
+    }
+
+    p {
+        text-align: left;
+        padding: 40px 200px;
+        letter-spacing: 1px;
+        color: $whiteColor;
+    }
+}
+
+main.service-page {
+    div.box {
+        position: absolute;
+        background-color: $BlueColor;
+        height: 80vh;
+        width: 70vw;
+        top: 50%;
+        left: 50%;
+        opacity: 90%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    div.hero-page {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("../images/computer.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+
+        h1.name-services {
+            position: relative;
+            color: $goldColor;
+            font-size: 3.5em;
+            align-items: center;
+            text-align: center;
+            top: 155px;
+            z-index: 4;
+        }
+
+        p {
+            color: white;
+            z-index: 5;
+            font-size: 1em;
+            position: relative;
+            text-align: center;
+            top:200px;
+        }
+        p.clickBelow {
+            color: white;
+            z-index: 5;
+            font-size: 1em;
+            position: relative;
+            text-align: center;
+            top:100px;
+        }
+
+        section.aboutUs {
+
+            button.btn {
+                position: absolute;
+                background-color: $goldColor;
+                outline: none;
+                border: none;
+                width: 20%;
+                height: 6%;
+                transform: translate(-50%, -50%);
+                align-items: center;
+                left: 50%;
+                z-index: 4;
+                top: 600px;
+                cursor: pointer;
+                transition: 200ms linear;
+
+                h2 {
+                    color: $BlueColor;
+                    transition: 200ms linear;
+                }
+            }
+
+            button:hover {
+                background-color: $BlueColor;
+
+                h2:hover {
+                    color: $goldColor;
+                }
+            }
+
+        }
+
+    }
+}
+
+section.service-gallery {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    div.main-section-div {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        section.main-section-div-section {
+            display: flex;
+            justify-content: space-evenly;
+            figure {
+                background-color: $goldColor;
+                width: 30%;
+                cursor: pointer;
+                img {
+                    height: 80%;
+                    width: 100%;
+                    transition: filter 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
+                }
+                figcaption {
+                    text-align: center;
+                    padding: 1em 0;
+                    p {
+                        text-align: left;
+                        padding: 1em;
+                    }
+                    button.btn {
+                        background-color: white;
+                        outline: none;
+                        border: none;
+                        width: 40%;
+                        height: 8%;
+                        cursor: pointer;
+                        transition: 200ms linear;
+                        h2 {
+                            color: $BlueColor;
+                            padding: 0.5em;
+                        }
+                    }
+                    button:hover {
+                        background-color: $BlueColor;
+        
+                        h2:hover {
+                            color: $goldColor;
+                        }
+                    }
+
+                }
+            }
+            figure:hover img {
+                filter: sepia(100%);
+              }
+              //targeting just figure
+            figure:hover {
+                box-shadow: 2rem 2rem 2rem 2rem rgba (1, 1, 1, 1);
+            }
+        }
+    }
+    
+}
+//service page ends here//////////////////////////////
+//contact page starts here
+
+section.contact {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/measuretape.jpg);
+    div.rect {
+        position: absolute;
+        background-color: $BlueColor;
+        height: 80vh;
+        width: 70vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    h1 {
+        position: relative;
+        color: $goldColor;
+        text-align: center;
+        top: 150px;
+        z-index: 7;
+        font-size: 3rem;
+    }
+    p {
+        top: 250px;
+        position: relative;
+        text-align: left;
+        left: 25%;
+        z-index: 9;
+        color: $whiteColor;
+        letter-spacing: 1px;
+        padding: 10px;
+    }
+    P::first-line {
+        font-size: 1em;
+        font-weight: 600;
+        color: $goldColor;
+    }
+    img {
+        width: 25%;
+        height: 40%;
+        z-index: 9;
+        position: relative;
+        margin-left: 800px;
+        margin-top: -30px;
+    }
+}
+section.Q-form {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: $goldColor;
+ h1 {
+    font-size: 3rem;
+    color: $whiteColor;
+    text-align: left;
+    padding: 30px ;
+    padding-left: 170px;
+ }
+ //Creating/ using forms 
+ form {
+    position: relative;
+    color: $whiteColor;
+    font-size: 2rem;
+    padding-top: 30px;
+    left: 40px;
+    input[type="text"]{
+        width: 50%;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        box-sizing: border-box;
+        display: list-item;
+    }
+    input[type="text"]:focus {
+        width: 50%;
+        border: none;
+        outline: 0;
+        background-color: $lightgrayColor;
+        transition: background-color 200ms linear;
+    }
+    input[type="submit"] {
+       
+        width: 50%;
+        background-color: $BlueColor;
+        color: $whiteColor;
+        padding: 14px 20px;
+        margin: 30px 0;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: all 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+    input[type="submit"]:hover {
+        background-color: $whiteColor;
+        color: $goldColor;
+        border: none;
+    }
+    #text-box {
+        width: 50%;
+        border: none;
+        outline: 0;
+        background-color: $whiteColor;
+        transition: background-color 200ms linear;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        resize: none;
+        display: list-item;
+    } 
+    #text-box:focus {
+        background-color: $lightgrayColor;
+    }
+ }
+
+}
+// end of forms//////////////////////////
+//contact page ends here/////////////////////////////////////

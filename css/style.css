@@ -1,0 +1,514 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+.container .nav {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  box-shadow: 0 0 10px rgb(62, 62, 62);
+  background-color: rgb(1, 11, 35);
+}
+.container .nav div.venado {
+  position: absolute;
+  font-size: 1em;
+  font-weight: 600;
+  top: 25px;
+  left: 30px;
+  color: rgb(255, 255, 255);
+}
+.container .nav__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+.container .nav__list:hover, .container .nav__list:focus {
+  fill: rgb(186, 174, 103);
+}
+.container .nav__listitem {
+  list-style: none;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+.container .nav__listitem::after {
+  content: "";
+  width: 0;
+  height: 0.15rem;
+  position: absolute;
+  left: 2rem;
+  bottom: 0.8rem;
+  background-color: rgb(186, 174, 103);
+  transition: width 200ms ease-in;
+}
+.container .nav__listitem:hover::after, .container .nav__listitem:focus::after {
+  width: 60%;
+}
+.container .nav__listitem:hover ul, .container .nav__listitem:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
+.container .nav__listitemdrop {
+  position: absolute;
+  background-color: rgb(1, 11, 35);
+  top: 4.3rem;
+  left: 1rem;
+  box-shadow: 0 0 10px rgb(1, 1, 1);
+  width: 12rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-in-out;
+}
+.container .nav__listitemdrop li {
+  list-style: none;
+  padding: 0.5rem;
+  transition: background-color 200ms ease-in-out;
+}
+.container .nav__listitemdrop li:hover, .container .nav__listitemdrop li:focus {
+  background-color: rgba(199, 175, 12, 0.5);
+}
+.container main.landing-page div.box {
+  position: absolute;
+  background-color: rgba(1, 11, 35, 0.75);
+  height: 80vh;
+  width: 70vw;
+  top: 50%;
+  left: 50%;
+  opacity: 90%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.container main.landing-page div.hero-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.container main.landing-page div.hero-page h1.name-venado {
+  position: relative;
+  color: rgb(186, 174, 103);
+  font-size: 3.5em;
+  align-items: center;
+  text-align: center;
+  top: 155px;
+  z-index: 4;
+}
+.container main.landing-page div.hero-page h1.name-contracting {
+  position: relative;
+  color: rgb(186, 174, 103);
+  font-size: 3.5em;
+  align-items: center;
+  text-align: center;
+  top: 160px;
+  z-index: 4;
+}
+.container main.landing-page div.hero-page h1.name-services {
+  position: relative;
+  color: rgb(186, 174, 103);
+  font-size: 3.5em;
+  align-items: center;
+  text-align: center;
+  top: 165px;
+  z-index: 4;
+}
+.container main.landing-page div.hero-page p {
+  color: white;
+  z-index: 5;
+  font-size: 1em;
+  position: relative;
+  text-align: center;
+  top: 340px;
+}
+.container main.landing-page div.hero-page section.aboutUs button.btn {
+  position: absolute;
+  background-color: rgb(186, 174, 103);
+  outline: none;
+  border: none;
+  width: 20%;
+  height: 6%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  left: 50%;
+  z-index: 4;
+  top: 600px;
+  cursor: pointer;
+  transition: 200ms linear;
+}
+.container main.landing-page div.hero-page section.aboutUs button.btn h2 {
+  color: rgb(1, 11, 35);
+  transition: 200ms linear;
+}
+.container main.landing-page div.hero-page section.aboutUs button:hover {
+  background-color: rgb(1, 11, 35);
+}
+.container main.landing-page div.hero-page section.aboutUs button:hover h2:hover {
+  color: rgb(186, 174, 103);
+}
+
+section.info-homePage {
+  width: 100%;
+  height: 50vh;
+}
+section.info-homePage h1.what {
+  text-align: center;
+  padding-top: 70px;
+  font-size: 2.5em;
+  color: rgb(186, 174, 103);
+}
+section.info-homePage p {
+  text-align: left;
+  padding: 40px 200px;
+  letter-spacing: 1px;
+}
+
+div.bio {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+div.bio img.logo-img {
+  position: relative;
+  padding-top: 65px;
+  padding-left: 0px;
+  padding-right: 40px;
+  float: left;
+  height: 100vh;
+}
+div.bio h1.h1-aboutUs {
+  color: rgb(186, 174, 103);
+  position: absolute;
+  top: 120px;
+  left: 770px;
+  font-size: 4em;
+  z-index: 5;
+  text-align: left;
+}
+div.bio p.p-aboutUs {
+  color: rgb(1, 1, 1);
+  position: relative;
+  top: 250px;
+  text-align: left;
+  padding-right: 40px;
+  letter-spacing: 1px;
+}
+
+section.footer {
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(1, 11, 35);
+}
+section.footer footer h3 {
+  padding-top: 35px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: 400;
+}
+
+section.Services button.btn {
+  position: absolute;
+  background-color: rgb(186, 174, 103);
+  outline: none;
+  border: none;
+  width: 20%;
+  height: 6%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  left: 63%;
+  z-index: 4;
+  top: 730px;
+  cursor: pointer;
+  transition: 200ms linear;
+}
+section.Services button.btn h2 {
+  color: rgb(1, 11, 35);
+  transition: 200ms linear;
+}
+section.Services button:hover {
+  background-color: rgb(1, 11, 35);
+}
+section.Services button:hover h2:hover {
+  color: rgb(186, 174, 103);
+}
+
+section.info-bioPage {
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(1, 11, 35);
+}
+section.info-bioPage h1.what {
+  text-align: center;
+  padding-top: 70px;
+  font-size: 2.5em;
+  color: rgb(186, 174, 103);
+}
+section.info-bioPage p {
+  text-align: left;
+  padding: 40px 200px;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+}
+
+main.service-page div.box {
+  position: absolute;
+  background-color: rgb(1, 11, 35);
+  height: 80vh;
+  width: 70vw;
+  top: 50%;
+  left: 50%;
+  opacity: 90%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+main.service-page div.hero-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/computer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+main.service-page div.hero-page h1.name-services {
+  position: relative;
+  color: rgb(186, 174, 103);
+  font-size: 3.5em;
+  align-items: center;
+  text-align: center;
+  top: 155px;
+  z-index: 4;
+}
+main.service-page div.hero-page p {
+  color: white;
+  z-index: 5;
+  font-size: 1em;
+  position: relative;
+  text-align: center;
+  top: 200px;
+}
+main.service-page div.hero-page p.clickBelow {
+  color: white;
+  z-index: 5;
+  font-size: 1em;
+  position: relative;
+  text-align: center;
+  top: 100px;
+}
+main.service-page div.hero-page section.aboutUs button.btn {
+  position: absolute;
+  background-color: rgb(186, 174, 103);
+  outline: none;
+  border: none;
+  width: 20%;
+  height: 6%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  left: 50%;
+  z-index: 4;
+  top: 600px;
+  cursor: pointer;
+  transition: 200ms linear;
+}
+main.service-page div.hero-page section.aboutUs button.btn h2 {
+  color: rgb(1, 11, 35);
+  transition: 200ms linear;
+}
+main.service-page div.hero-page section.aboutUs button:hover {
+  background-color: rgb(1, 11, 35);
+}
+main.service-page div.hero-page section.aboutUs button:hover h2:hover {
+  color: rgb(186, 174, 103);
+}
+
+section.service-gallery {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+section.service-gallery div.main-section-div {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+section.service-gallery div.main-section-div section.main-section-div-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+section.service-gallery div.main-section-div section.main-section-div-section figure {
+  background-color: rgb(186, 174, 103);
+  width: 30%;
+  cursor: pointer;
+}
+section.service-gallery div.main-section-div section.main-section-div-section figure img {
+  height: 80%;
+  width: 100%;
+  transition: filter 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+section.service-gallery div.main-section-div section.main-section-div-section figure figcaption {
+  text-align: center;
+  padding: 1em 0;
+}
+section.service-gallery div.main-section-div section.main-section-div-section figure figcaption p {
+  text-align: left;
+  padding: 1em;
+}
+section.service-gallery div.main-section-div section.main-section-div-section figure figcaption button.btn {
+  background-color: white;
+  outline: none;
+  border: none;
+  width: 40%;
+  height: 8%;
+  cursor: pointer;
+  transition: 200ms linear;
+}
+section.service-gallery div.main-section-div section.main-section-div-section figure figcaption button.btn h2 {
+  color: rgb(1, 11, 35);
+  padding: 0.5em;
+}
+section.service-gallery div.main-section-div section.main-section-div-section figure figcaption button:hover {
+  background-color: rgb(1, 11, 35);
+}
+section.service-gallery div.main-section-div section.main-section-div-section figure figcaption button:hover h2:hover {
+  color: rgb(186, 174, 103);
+}
+section.service-gallery div.main-section-div section.main-section-div-section figure:hover img {
+  filter: sepia(100%);
+}
+section.service-gallery div.main-section-div section.main-section-div-section figure:hover {
+  box-shadow: 2rem 2rem 2rem 2rem rgba 1, 1, 1, 1;
+}
+
+section.contact {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/measuretape.jpg);
+}
+section.contact div.rect {
+  position: absolute;
+  background-color: rgb(1, 11, 35);
+  height: 80vh;
+  width: 70vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+section.contact h1 {
+  position: relative;
+  color: rgb(186, 174, 103);
+  text-align: center;
+  top: 150px;
+  z-index: 7;
+  font-size: 3rem;
+}
+section.contact p {
+  top: 250px;
+  position: relative;
+  text-align: left;
+  left: 25%;
+  z-index: 9;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  padding: 10px;
+}
+section.contact P::first-line {
+  font-size: 1em;
+  font-weight: 600;
+  color: rgb(186, 174, 103);
+}
+section.contact img {
+  width: 25%;
+  height: 40%;
+  z-index: 9;
+  position: relative;
+  margin-left: 800px;
+  margin-top: -30px;
+}
+
+section.Q-form {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(186, 174, 103);
+}
+section.Q-form h1 {
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  padding: 30px;
+  padding-left: 170px;
+}
+section.Q-form form {
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  padding-top: 30px;
+  left: 40px;
+}
+section.Q-form form input[type=text] {
+  width: 50%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  box-sizing: border-box;
+  display: list-item;
+}
+section.Q-form form input[type=text]:focus {
+  width: 50%;
+  border: none;
+  outline: 0;
+  background-color: rgb(222, 222, 222);
+  transition: background-color 200ms linear;
+}
+section.Q-form form input[type=submit] {
+  width: 50%;
+  background-color: rgb(1, 11, 35);
+  color: rgb(255, 255, 255);
+  padding: 14px 20px;
+  margin: 30px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+section.Q-form form input[type=submit]:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(186, 174, 103);
+  border: none;
+}
+section.Q-form form #text-box {
+  width: 50%;
+  border: none;
+  outline: 0;
+  background-color: rgb(255, 255, 255);
+  transition: background-color 200ms linear;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  resize: none;
+  display: list-item;
+}
+section.Q-form form #text-box:focus {
+  background-color: rgb(222, 222, 222);
+}/*# sourceMappingURL=style.css.map */
