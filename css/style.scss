@@ -511,6 +511,8 @@ section.contact {
     h1 {
         position: relative;
         color: $goldColor;
+        // justify-content: center;
+        // align-items: center;
         text-align: center;
         top: 150px;
         z-index: 7;
@@ -524,7 +526,7 @@ section.contact {
         z-index: 9;
         color: $whiteColor;
         letter-spacing: 1px;
-        padding: 10px;
+        margin: 10px;
     }
     P::first-line {
         font-size: 1em;
@@ -546,11 +548,14 @@ section.Q-form {
     height: 100vh;
     background-color: $goldColor;
  h1 {
+    // justify-content: center;
+    // align-items: center;
     font-size: 3rem;
     color: $whiteColor;
     text-align: left;
     padding: 30px ;
-    padding-left: 170px;
+    // padding-left: 170px;
+    margin-left: 500px;
  }
  //Creating/ using forms 
  form {
@@ -559,6 +564,7 @@ section.Q-form {
     font-size: 2rem;
     padding-top: 30px;
     left: 40px;
+    margin-left: 450px;
     input[type="text"]{
         width: 50%;
         padding: 14px 20px;

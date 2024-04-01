@@ -430,7 +430,7 @@ section.contact p {
   z-index: 9;
   color: rgb(255, 255, 255);
   letter-spacing: 1px;
-  padding: 10px;
+  margin: 10px;
 }
 section.contact P::first-line {
   font-size: 1em;
@@ -457,7 +457,7 @@ section.Q-form h1 {
   color: rgb(255, 255, 255);
   text-align: left;
   padding: 30px;
-  padding-left: 170px;
+  margin-left: 500px;
 }
 section.Q-form form {
   position: relative;
@@ -465,6 +465,7 @@ section.Q-form form {
   font-size: 2rem;
   padding-top: 30px;
   left: 40px;
+  margin-left: 450px;
 }
 section.Q-form form input[type=text] {
   width: 50%;
